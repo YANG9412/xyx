@@ -33,9 +33,10 @@
     "packNpmRelationList": [],
     "minifyWXSS": true
   },
+  "jsserverRoot": "jsserver/",
   "compileType": "game",
-  "libVersion": "2.11.2",
-  "appid": "wx2fafd0c7211df136",
+  "libVersion": "2.10.4",
+  "appid": "wx7c588eb3a0878e51",
   "projectname": "aircraft-war",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},

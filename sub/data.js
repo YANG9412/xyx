@@ -50,36 +50,36 @@ export function getDataFromSource(item) {
  * @param { Object } selfData: 通过getUserInfo拿到的用户信息
  */
 
-export function findSelf(list, selfData) {
-    // console.log("selfData",  selfData);
-    let result = {
-        index: -1,
-        self : null,
-    };
+// export function findSelf(list, selfData) {
+//     // console.log("selfData",  selfData);
+//     let result = {
+//         index: -1,
+//         self : null,
+//     };
 
-    list.forEach( (item, index) => {
-        if ( item.avatarUrl === selfData.avatarUrl ) {
-            result.self       = item;
-            let { rankScore, update_time } = getDataFromSource(item);
+//     list.forEach( (item, index) => {
+//         if ( item.avatarUrl === selfData.avatarUrl ) {
+//             result.self       = item;
+//             let { rankScore, update_time } = getDataFromSource(item);
 
-            result.self.rankScore       = rankScore;
-            result.self.update_time = update_time;
-            result.index            = index;
-        }
-        else {
-            /******debug******/
-            result.self       = item;
-            let { rankScore, update_time } = getDataFromSource(item);
+//             result.self.rankScore       = rankScore;
+//             result.self.update_time = update_time;
+//             result.index            = index;
+//         }
+//         else {
+//             /******debug******/
+//             result.self       = item;
+//             let { rankScore, update_time } = getDataFromSource(item);
 
-            result.self.rankScore       = rankScore;
-            result.self.update_time = update_time;
-            result.index            = index;
-            /******debug******/
-        }
-    });
+//             result.self.rankScore       = rankScore;
+//             result.self.update_time = update_time;
+//             result.index            = index;
+//             /******debug******/
+//         }
+//     });
 
-    return result;
-}
+//     return result;
+// }
 
 /**
  * 用户第一次玩游戏的时候拉取排行榜自身肯定不在列表
@@ -112,8 +112,10 @@ export function replaceSelfDataInList(list, info, rankScore) {
  * 获取好友排行榜列表
  */
 export function getFriendData(key, callback = none) {
+    const now = new Date()
+    const giftStorageKey = now.toDateString()
     wx.getFriendCloudStorage({
-        keyList: ['score1', 'score2', 'score3'],
+        keyList: ['score1', 'score2', 'score3', giftStorageKey],
         success: res => {
             console.log(res);
 

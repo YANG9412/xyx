@@ -2,8 +2,7 @@
 export default {
     box: {
         width: 900,
-        height: 1810,
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        height: 1410,
     },
     container: {
         width: 900,
@@ -37,7 +36,7 @@ export default {
     },
 
     title: {
-        width: 420,
+        width: 860,
         fontSize: 48,
         height: 100,
         lineHeight: 100,
@@ -118,9 +117,9 @@ export default {
     frbox: {
         width: 820,
         height: 200,
-        position: 'absolute',
-        top: 0,
-        left: 0,
+        // position: 'absolute',
+        // top: 0,
+        // left: 0,
     },
     gift: {
         width: 80,
@@ -128,6 +127,7 @@ export default {
         position: 'absolute',
         top: 60,
         right: 40,
+        backgroundColor: 'red'
     },
     // listItemOld: {
     //    backgroundColor: '#ffffff',

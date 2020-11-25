@@ -1,4 +1,12 @@
 {
     "deviceOrientation": "portrait",
-    "openDataContext": "sub"
+    "openDataContext": "sub",
+    "modifyFriendInteractiveStorageTemplates": [
+      {
+        "key": "1",
+        "action": "赠送", 
+        "object": "礼物",
+        "ratio": 10 
+      }
+    ]
 }
